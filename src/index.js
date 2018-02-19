@@ -510,13 +510,14 @@ export default class Resizable extends React.Component<ResizableProps, State> {
       }
       return getStringSize(this.state[key]);
     };
-    const width = ((size && size.width) && !this.state.isResizing)
-      ? getStringSize(size.width)
-      : getSize('width');
-    const height = ((size && size.height) && !this.state.isResizing)
-      ? getStringSize(size.height)
-      : getSize('height');
-    return { width, height };
+    // const width = ((size && size.width) && !this.state.isResizing)
+    //   ? getStringSize(size.width)
+    //   : getSize('width');
+    // const height = ((size && size.height) && !this.state.isResizing)
+    //   ? getStringSize(size.height)
+    //   : getSize('height');
+    // return { width, height };
+    return { width: getStringSize(size.width), height: getStringSize(size.height) };
   }
 
   updateSize(size: Size) {
