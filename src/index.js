@@ -250,17 +250,17 @@ export default class Resizable extends React.Component<ResizableProps, State> {
       width: this.state.width || size.width,
       height: this.state.height || size.height,
     });
-    const element = document.createElement('div');
-    element.id = this.baseSizeId;
-    element.style.width = '100%';
-    element.style.height = '100%';
-    element.style.position = 'relative';
-    element.style.transform = 'scale(0, 0)';
-    element.style.left = '-2147483647px';
-    element.style.flex = '0';
-    const parent = this.parentNode;
-    if (!(parent instanceof HTMLElement)) return;
-    parent.appendChild(element);
+    // const element = document.createElement('div');
+    // element.id = this.baseSizeId;
+    // element.style.width = '100%';
+    // element.style.height = '100%';
+    // element.style.position = 'relative';
+    // element.style.transform = 'scale(0, 0)';
+    // element.style.left = '-2147483647px';
+    // element.style.flex = '0';
+    // const parent = this.parentNode;
+    // if (!(parent instanceof HTMLElement)) return;
+    // parent.appendChild(element);
   }
 
   componentWillReceiveProps(next: ResizableProps) {
